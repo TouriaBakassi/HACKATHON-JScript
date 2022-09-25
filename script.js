@@ -1,12 +1,24 @@
-// sum(1,2,3) // => 6 | sum(8,2) // => 10 | sum(1,2,3, 4, 5) // => 15
+// Vous distinguez des pièces de : 1, 2, 5, 10, 20 dollars. On vous demande de créer une fonction
+// optimale qui prend en paramètres un montant et nous renvoie le nombre de pièces minimales
+// pour former ce montant.
+// Ex : console.log(minCoins(43)) => result[1,1,0,0,2]
 
-let sum=[2,4,5,8,22];
-let somme=0;
+let Piece1, Piece2, Piece3, Piece4, Piece5;
+let result=[];
+let montant=115;
+function Montant() {
 
-function SommeNmbr() {
-    for (let i = 0; i < sum.length; i++) {
-        somme= somme+sum[i];  
-    } 
-    console.log(somme);
+    Piece5=Math.floor(montant/20) ;
+    Piece4=Math.floor((montant%20)/10);
+    Piece3=Math.floor(((montant%20)%10)/5);
+    Piece2=Math.floor((((montant%20)%10)%5)/2);
+    Piece1=Math.floor(((((montant%20)%10)%5)%2)/1);
+
+    result[0]=Piece1;
+    result[1]=Piece2;
+    result[2]=Piece3;
+    result[3]=Piece4;
+    result[4]=Piece5; 
 }
-SommeNmbr();
+Montant();
+console.log(result);
