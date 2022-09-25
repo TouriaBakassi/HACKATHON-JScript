@@ -1,0 +1,28 @@
+body{
+    width: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#sidebar{
+    width: 20%;
+    background-color: rgb(36, 36, 130);
+    display: none;
+}
+#sidebar img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+#icon i{
+    background-color: blueviolet;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+#sidebar.active{
+    display: block;
+    transition: all 0.5s ease-in;
+}
